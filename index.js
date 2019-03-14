@@ -4,7 +4,6 @@ $(document).ready(function () {
   
 d3.json("/data/users.json",(function(data_json)
 {
-  
 
   var bubbleChart = new d3.svg.BubbleChart({
     supportResponsive: true,
@@ -20,14 +19,14 @@ d3.json("/data/users.json",(function(data_json)
     //circleColor: use @default
     data: {
       items: data_json,
-      eval: function (item) {return item.x_axis;},
-      classed: function (item) {return "item.radius";}
+      eval: function (item) {return "23";},
+      classed: function (item) {return "443"}
     },
     plugins: [
       {
         name: "central-click",
         options: {
-          text: "(See more detail)",
+          text: "",
           style: {
             "font-size": "12px",
             "font-style": "italic",
@@ -38,7 +37,7 @@ d3.json("/data/users.json",(function(data_json)
           },
           attr: {dy: "65px"},
           centralClick: function() {
-            alert("Here is more details!!");
+            console.log("nice central click")
           }
         }
       },
@@ -47,12 +46,13 @@ d3.json("/data/users.json",(function(data_json)
         options: {
           format: [
             {// Line #0
-              textField: "count",
+              textField: "name",
               classed: {count: true},
               style: {
-                "font-size": "28px",
+                "font-size": "50px",
                 "font-family": "Source Sans Pro, sans-serif",
                 "text-anchor": "middle",
+                "padding":"5em",
                 fill: "white"
               },
               attr: {
@@ -61,17 +61,51 @@ d3.json("/data/users.json",(function(data_json)
                 y: function (d) {return d.cy;}
               }
             },
+            {// Line #0
+              textField: "id",
+              classed: {count: true},
+              style: {
+                "font-size": "25px",
+                "font-family": "Source Sans Pro, sans-serif",
+                "text-anchor": "middle",
+                fill: "black"
+              },
+              attr: {
+                dy: "50px",
+                x: function (d) {return d.cx;},
+                y: function (d) {return d.cy;}
+              }
+            },
+
+               {// Line #0
+                textField: "description",
+                classed: {count: true},
+                style: {
+                  "font-size": "25px",
+                  "font-family": "Source Sans Pro, sans-serif",
+                  "text-anchor": "middle",
+                  fill: "black"
+                },
+                attr: {
+                  dy: "50px",
+                  x: function (d) {return d.cx;},
+                  y: function (d) {return d.cy;}
+                }
+              },
+
+           
+
             {// Line #1
-              textField: "text",
+              textField: "category_type",
               classed: {text: true},
               style: {
-                "font-size": "14px",
+                "font-size": "25px",
                 "font-family": "Source Sans Pro, sans-serif",
                 "text-anchor": "middle",
                 fill: "white"
               },
               attr: {
-                dy: "20px",
+                dy: "100px",
                 x: function (d) {return d.cx;},
                 y: function (d) {return d.cy;}
               }
@@ -79,12 +113,12 @@ d3.json("/data/users.json",(function(data_json)
           ],
           centralFormat: [
             {// Line #0
-              style: {"font-size": "50px"},
+              style: {"font-size": "100px"},
               attr: {}
             },
             {// Line #1
-              style: {"font-size": "30px"},
-              attr: {dy: "40px"}
+              style: {"font-size": "0px"},
+              attr: {dy: "0px"}
             }
           ]
         }
