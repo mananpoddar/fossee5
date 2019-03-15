@@ -1,20 +1,26 @@
 [
-    {
-     "name": "manan",
-     "id": "1",
-     "description": "Hi Manan",
-     "category_type" : "oh yeah"
+  {
+    "name": "manan",
+    "id": "1",
+    "description": "Hi Manan",
+    "category_type": "oh yeah"
   },
   {
-      "name": "arqum",
-      "id": "2",
-      "description": "Hi arqum",
-      "category_type" : "oh yeah"
-   },
-   {
     "name": "arqum",
     "id": "2",
     "description": "Hi arqum",
-    "category_type" : "oh yeah"
- }
- ]
+    "category_type": "oh yeah"
+  },
+  {
+    "name": "arqum",
+    "id": "2",
+    "description": "Hi arqum",
+    "category_type": "oh yeah"
+  },
+  {
+    "name": "arqum",
+    "id": "2",
+    "description": "Hi arqum",
+    "category_type": "oh yeah"
+  }
+]
