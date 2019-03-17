@@ -8,18 +8,10 @@ IITB summer Internship in open source
 git clone https://github.com/mananpoddar/fossee5
 
 ```
-- Create a virtualenv
+- Start  the dev server through python
 ```
-virtualenv -p python3 venv
-source venv/bin/activate
-```
-
-- Install the requirements
-```
-pip install -r requirements.txt
+python3 -m http.server
 ```
 
-- Run the dev server
-```
-python manage.py runserver
-```
+- see the animations on localhost:8000
+
