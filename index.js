@@ -16,7 +16,7 @@ $(document).ready(function() {
         }
       },
       plugins: [
-        {
+        { //styles defining frontend of central click
           name: "central-click",
           options: {
             text: "",
@@ -34,7 +34,7 @@ $(document).ready(function() {
             }
           }
         },
-        {
+        {//it contains all the textfield of json as json objects, each object corresponds to the individual textField
           name: "lines",
           options: {
             format: [
