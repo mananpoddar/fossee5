@@ -6,7 +6,7 @@ IITB summer Internship in open source
 - Clone the repo
 ``` 
 git clone https://github.com/mananpoddar/fossee5
-
+cd fossee5
 ```
 - Start  the dev server through python
 ```
