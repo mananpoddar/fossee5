@@ -4,8 +4,7 @@ Please see the demo video on maximum possible volume with Earphones.<br>
 
 -About the application
 
-It's an application simulating an API for images, where user can use the image by Id.<br>
-And the Id will be returned by the API itself.
+It's an application for animating a json objects having attributes as name, id, category type etc.
 
 <b> Setting up the project:</b>
 
